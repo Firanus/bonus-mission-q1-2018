@@ -9,17 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBAction func touchCard(_ sender: UIButton) {
+        if sender.title(for: .normal) == nil {
+            sender.setTitle("👻", for: .normal)
+            sender.backgroundColor = UIColor.white
+        } else {
+            sender.setTitle(nil, for: .normal)
+            sender.backgroundColor = UIColor.orange
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 
